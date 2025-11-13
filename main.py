@@ -2,7 +2,6 @@ import csv
 from flask import Flask, render_template
 from ListaMultiple import ListaMultiple
 from Node import Node
-import csv
 
 app = Flask(__name__)
 @app.route('/')
@@ -11,13 +10,11 @@ def root():
         {
             'lat': 6.246631,
             'lon': -75.581775,
-            'popup': 'This is the middle of the map.'
         }
     ]
     return render_template('index.html', markers=markers)
 
 def divipola(self):
-    # Diccionario con estructura: {departamento: [{municipio, lat, lon}, ...]}
     diccionario = {}  
     
     f = open(self, encoding='utf-8')
@@ -98,7 +95,7 @@ while current_dept:
             current_muni = current_muni.next
     
     current_dept = current_dept.next
-
+print('--- End of List ---')
 if __name__ == '__main__':
     app.run(host='localhost', port=8080, debug=True)
 
