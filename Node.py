@@ -1,5 +1,5 @@
 class Node:
-    def __init__(self, id, name):
+    def __init__(self, id, name,lat,lon):
         self.id = id
         self.name = name
         self.next = None
