@@ -7,4 +7,4 @@ class Node:
         self.sub_list = None   # apunta a otra LinkedList
 
     def __repr__(self):
-        return f"Node({self.data!r})"
+        return f"Node({self.name!r})"
